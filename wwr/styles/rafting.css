@@ -25,32 +25,50 @@ body {
 }
 
 /* Header Styles */
+
+/* Styles pour l'entête */
 header {
     background-color: var(--accent1-color);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border-bottom: 2px solid var(--secondary-color);
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
 }
 
 header img {
-    height: 50px;
+    height: 70px;
+    margin-left: 100px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
 }
 
 header nav a {
-    color: var(--accent2-color);
-    margin-left: 15px;
-    font-weight: 700;
     font-family: var(--heading-font);
-}
-a {
+    color: var(--accent2-color);
+    font-weight: 800;
     text-decoration: none;
+    transition: color 0.3s ease;
+    margin-right: 70px;
 }
 
 header nav a:hover {
     color: var(--primary-color);
 }
+
 
 .hero {
     position: relative;
@@ -78,32 +96,67 @@ header nav a:hover {
 .hero article {
     position: absolute;
     bottom: 10%;
-    left: 10%;
+    left: 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    width: 80%; /* Largeur de l'article */
     background: rgba(0, 0, 0, 0.6);
     color: var(--accent1-color);
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 50%;
-    text-align: justify;
-    
-    
-    
+    padding: 15px; /* Réduction du padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 150px; /* Limite la hauteur maximale */
+    overflow: hidden; /* Cache tout ce qui dépasse */
+    margin-left: 45px;
 }
 
 .hero article img {
-    float: right; /* Floats the image to the right */
-    width: 40%; /* Adjust size */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 15px; /* Space between text and image */
+    width: 80%; /* L'image reste adaptée à sa colonne */
+    height: 70%; /* L'image remplit la hauteur disponible */
+    object-fit: cover; /* Garde les proportions et remplit la zone */
     border-radius: 5px;
 }
 
-
 .hero article p {
+    font-size: 19px; /* Taille de police réduite légèrement */
+    line-height: 1.5; /* Réduction de l'interligne */
     margin: 0;
-    font-size: 1em;
-    line-height: 1.5;
+    overflow: hidden; /* Cache les débordements de texte */
+    text-overflow: ellipsis; /* Ajoute des "..." si le texte dépasse */
 }
+
+.history {
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--accent1-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-family: var(--heading-font);
+    font-size: 1.8em;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    text-align: justify;
+}
+
+.history-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 /* Section Styles */
 section {
@@ -113,50 +166,55 @@ section {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-section h2 {
-    margin-bottom: 15px;
-    color: var(--secondary-color);
-    font-family: var(--heading-font);
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    text-align: center;
 }
 
-section p {
-    font-family: var(--text-font);
-    color: var(--accent2-color);
+.adventure-grid figure {
+    margin: 0;
 }
 
-section img {
+.adventure-grid img {
     max-width: 100%;
-    margin-bottom: 15px;
+    height: auto;
     border-radius: 5px;
 }
 
-/* Footer Styles */
+.adventure-grid figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
 footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: var(--accent1-color);
-    text-align: center;
     padding: 20px;
     border-top: 2px solid var(--secondary-color);
-    margin-top: 20px;
 }
 
 footer p {
-    margin-bottom: 10px;
     color: var(--accent2-color);
     font-family: var(--text-font);
 }
 
-footer .sociallinks a {
-    margin: 0 10px;
+.sociallinks {
+    display: flex;
+    gap: 10px;
 }
 
-footer .sociallinks img {
+.sociallinks img {
     width: 30px;
     height: 30px;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
 }
 
-footer .sociallinks img:hover {
+.sociallinks img:hover {
     filter: grayscale(0%);
 }

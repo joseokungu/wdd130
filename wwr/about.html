@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join us for thrilling white water rafting adventures. Explore stunning rivers, enjoy professional guides, and experience the ultimate outdoor excitement.">
+    <meta name="description"
+        content="Join us for thrilling white water rafting adventures. Explore stunning rivers, enjoy professional guides, and experience the ultimate outdoor excitement.">
     <meta name="author" content="jose okitandende okungu">
     <title>💦White Water Rafting | Thrilling Outdoor Experiences</title>
     <link rel="stylesheet" href="styles/rafting.css">
@@ -18,16 +19,19 @@
 
 <body>
     <header>
-        <div>
-            <img src="images/raftinglogo.jpg" alt="logo">
+        <div class="header-container">
+            <img src="images/raftinglogo.jpg" alt="Logo">
             <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="trips.html">Trips</a>
-                <a href="contact.html">Contact Us</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
             </nav>
         </div>
-    </header>
+    </header>    
+
     <main>
         <div class="hero">
             <img src="images/raftingfirst.webp" alt="picture-wwr">
@@ -35,43 +39,55 @@
                 White Water Rafting
             </h1>
             <article>
-                <img src="images/rafting4.webp" alt="picture-wwr">
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Aliquid, deleniti quia! Provident eius perferendis ipsum nulla quaerat?
                     Minus amet consequatur repellendus dolor, est eius iusto excepturi dolorem.
                     Error, iusto distinctio.
                 </p>
-            </article>
+                <img src="images/rafting4.webp" alt="White Water Rafting Adventure">
+            </article>            
         </div>
-        <section>
-            <h2>
-                History
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aliquid doloribus consectetur libero voluptas nulla quas perspiciatis ad sint cum,
-                placeat est deleniti sunt, voluptatem quam, nesciunt in labore possimus officiis.
-            </p>
+        <section class="history">
+            <h2>History</h2>
+            <div class="history-grid">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid doloribus consectetur libero
+                    voluptas nulla quas perspiciatis ad sint cum, placeat est deleniti sunt, voluptatem quam, nesciunt
+                    in labore possimus officiis.</p>
+                <img src="images/rafting4.webp" alt="History Image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid doloribus consectetur libero
+                    voluptas nulla quas perspiciatis ad sint cum, placeat est deleniti sunt, voluptatem quam, nesciunt
+                    in labore possimus officiis.</p>
+            </div>
         </section>
         <section>
-            <h2>
-                Adventure Awaits You!
-            </h2>
-            <img src="images/rafting1.webp" alt="picture">
-            <img src="images/rafting2.webp" alt="picture">
-            <img src="images/rafting5.webp" alt="picture">
-            <img src="images/raftingsmall.jpg" alt="picture">
-            <img src="images/rafting3.webp" alt="picture">
-
+            <h2>Adventure Awaits You!</h2>
+            <div class="adventure-grid">
+                <figure>
+                    <img src="images/rafting1.webp" alt="Los Dientes del Diablo">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting2.webp" alt="Big Mallard">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting5.webp" alt="Half Day Adventure">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/raftingsmall.jpg" alt="Rapid Rush">
+                    <figcaption>Rapid Rush</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting3.webp" alt="Waterfall Extreme">
+                    <figcaption>Waterfall Extreme</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
     <footer>
-        <p>
-            ©️2024 🚣‍♂️ white water rafting 🚣🏻, jose okitandende okungu.
-        </p>
-
-
+        <p>©️2024 🚣‍♂️ White Water Rafting 🚣🏻, Jose Okitandende Okungu.</p>
         <nav class="sociallinks">
             <a href="https://facebook.com">
                 <img src="images/facebook.svg" alt="Facebook">
@@ -83,7 +99,7 @@
                 <img src="images/instagram.svg" alt="Instagram">
             </a>
         </nav>
-    </footer>
+    </footer>    
 </body>
 
 </html>
