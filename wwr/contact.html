@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join us for thrilling white water rafting adventures. Explore stunning rivers, enjoy professional guides, and experience the ultimate outdoor excitement.">
+    <meta name="author" content="jose okitandende okungu">
+    <title>White Water Rafting Co.</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <div class="header-container">
+                <img src="images/raftinglogo.jpg" alt="Logo">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="trips.html">Trips</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="hero">
+            <div id="hero-box">
+                <img id="hero-img" src="./images/hero.png" alt="People enjoying white water rafting" />
+            </div>
+            <section id="hero-msg">
+                <h1 class="home-title">Contact Us</h1>
+                <h4>Make Memories with Dry Oar</h4>
+                <div class="button-box">
+                    <a class="book" href="./contact.html">Book Now</a>
+                </div>
+            </section>
+        </div>
+        <main class="home-grid">
+            <div id="feedback"></div>
+
+            <form action="/my-handling-form-page" method="post">
+                <ul>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" />
+                    </li>
+                    <li>
+                        <label for="mail">Email:</label>
+                        <input type="email" id="mail" name="user_email" />
+                    </li>
+                    <li>
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                    </li>
+                    <li class="button">
+                        <button type="submit">Send your message</button>
+                    </li>
+                </ul>
+            </form>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11906.430664856593!2d27.524260226418743!3d-11.641041650546718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x197238b31ca6173d%3A0xcef97c369f491fa4!2sRuashi%2C%20Lubumbashi!5e1!3m2!1sfr!2scd!4v1750288426831!5m2!1sfr!2scd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </main>
+        <footer>
+            <p>©️2024 🚣‍♂️ White Water Rafting 🚣🏻, Jose Okitandende Okungu.</p>
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById("feedback");
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener("submit", function (e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML =
+                "Hello " + formElement.user_name.value + "! Thank you for your message. We will get back with you as soon as possible!";
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle("moveDown");
+        });
+    </script>
+</body>
+
+</html>
