@@ -121,3 +121,33 @@ nav a {
   align-items: center;
   margin: auto;
 }
+
+.portfolio-section-photos {
+  background-color: white;
+}
+
+.portfolio-section-photos h2 {
+  color: #242424;
+  margin-bottom: 80px;
+}
+
+.photos-paysage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px 300px;
+  gap: 15px;
+}
+
+.photos-portrait {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 15px;
+}
+
+.photos-paysage img,
+.photos-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
